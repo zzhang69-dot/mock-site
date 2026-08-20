@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: #0e0e0e;
+  font-family: 'Dosis', sans-serif;
+  color: #2b2b2b;
+}
+
+.site-canvas {
+  width: min(100%, 1450px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 10px 0 12px;
+  background: #ffffff;
+}
+
+.page {
+  width: calc(100% - 40px);
+  max-width: 886px;
+  margin: 0 auto;
+  zoom: 1.1;
+}
+
+.big-title {
+  color: #305143;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin: 0 0 19px;
+}
+
+.top-section {
+  position: relative;
+  height: 340px;
+  margin-bottom: 42px;
+}
+
+.big-pic {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 500px;
+  height: 315px;
+
+  border-radius: 5px;
+  overflow: hidden;
+
+  background-image: url('assets/top-squid.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}
+
+.blue-box {
+  position: absolute;
+  top: 60px;
+  left: 18px;
+
+  width: 438px;
+  height: 199px;
+  padding: 19px 22px;
+
+  background: linear-gradient(
+    180deg,
+    #1f748e 0%,
+    #5ca09c 100%
+  );
+
+  border-radius: 5px;
+  color: #fafcfb;
+
+  z-index: 2;
+}
+
+.blue-box h2 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  margin: 15px 0 9px;
+}
+
+.blue-box p {
+  font-size: 16px;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.95);
+  margin: 0;
+}
+
+.author-line {
+  position: absolute;
+  top: 270px;
+  left: 18px;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: #8d8988;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  z-index: 2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 31px;
+
+  margin-bottom: 28px;
+}
+
+.card {
+  height: 270px;
+
+  background-color: #fbfafc;
+  border: 1px solid #dedade;
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 13px 16px 11px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top,
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px 8px;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.blue-box .tag {
+  padding: 7px 9px;
+  font-size: 12px;
+}
+
+.tag-chem,
+.tag-bio {
+  background: #df815f;
+}
+
+.tag-geo {
+  background: #315143;
+}
+
+.article-word {
+  color: #8c8989;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+
+.card h3 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  margin: 23px 0 9px;
+  color: #111;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.35;
+  color: #333;
+
+  margin: 0;
+}
+
+.card-bottom {
+  margin-top: auto;
+  font-family: 'Cormorant Garamond', serif;
+  color: #a09b9b;
+  font-size: 13px;
+}
+
+.card-pic {
+  flex: 0 0 87px;
+  width: calc(100% + 2px);
+  margin: 0 -1px -1px;
+
+  background-image: url('assets/card-squid.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.read-more {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1px;
+}
+
+.read-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5b0f09;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.circle-arrow {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    background: #ffffff;
+  }
+
+  .site-canvas {
+    width: 100%;
+  }
+
+  .page {
+    width: min(100% - 32px, 560px);
+    zoom: 1;
+  }
+
+  .big-title {
+    font-size: 32px;
+  }
+
+  .top-section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 42px;
+  }
+
+  .big-pic,
+  .blue-box,
+  .author-line {
+    position: relative;
+    inset: auto;
+  }
+
+  .big-pic {
+    order: 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 838 / 520;
+  }
+
+  .blue-box {
+    order: 2;
+    width: calc(100% - 28px);
+    height: auto;
+    min-height: 195px;
+    margin: -55px 14px 0;
+  }
+
+  .author-line {
+    order: 3;
+    margin: 14px 14px 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card {
+    height: 330px;
+  }
+
+  .card-pic {
+    flex-basis: 120px;
+  }
+}
